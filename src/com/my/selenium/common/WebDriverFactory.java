@@ -16,20 +16,20 @@ public class WebDriverFactory {
 		switch (driverName) {
 		case "ch":
 			// Chromedriver
-			System.setProperty("webdriver.chrome.driver", "D:\\driversSel\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 			driver = new ChromeDriver();
 			driver.get("http://www.google.com");
 			driver.manage().window().maximize();
 			break;
 		case "fd":
 			// Firefox driver
-			System.setProperty("webdriver.gecko.driver", "D:\\driversSel\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 			driver = new FirefoxDriver();
 			driver.get("http://www.google.com");
 			break;
 		case "ie":
 			// IEdriver
-			System.setProperty("webdriver.ie.driver", "D:\\driversSel\\IEDriverServer.exe");
+			System.setProperty("webdriver.ie.driver", "drivers/IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
 			driver.get("http://www.google.com");
 			break;
