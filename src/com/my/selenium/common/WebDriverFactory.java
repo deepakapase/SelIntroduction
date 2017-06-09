@@ -7,31 +7,25 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class WebDriverFactory {
 
-	public static WebDriver getDriver(String driverName) throws Exception {
+	public static WebDriver getDriver(DriverType drivertype) {
 		WebDriver driver = null;
-		if (driverName == null) {
-			throw new Exception("Driver name missing");
-		}
 
-		switch (driverName) {
-		case "ch":
+		switch (drivertype) {
+		case CHROME:
 			// Chromedriver
 			System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 			driver = new ChromeDriver();
-			driver.get("http://www.google.com");
-			driver.manage().window().maximize();
 			break;
-		case "fd":
+		case FIREFOX:
 			// Firefox driver
 			System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 			driver = new FirefoxDriver();
-			driver.get("http://www.google.com");
+
 			break;
-		case "ie":
+		case IE:
 			// IEdriver
 			System.setProperty("webdriver.ie.driver", "drivers/IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
-			driver.get("http://www.google.com");
 			break;
 		}
 
