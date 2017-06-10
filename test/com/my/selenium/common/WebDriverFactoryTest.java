@@ -11,7 +11,6 @@ public class WebDriverFactoryTest {
 		driver.get("http://www.google.com");
 		driver.manage().window().maximize();
 		Assert.assertEquals("Google", driver.getTitle());
-
 	}
 
 	@Test

@@ -20,7 +20,6 @@ public class WebDriverFactory {
 			// Firefox driver
 			System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 			driver = new FirefoxDriver();
-
 			break;
 		case IE:
 			// IEdriver
@@ -28,7 +27,6 @@ public class WebDriverFactory {
 			driver = new InternetExplorerDriver();
 			break;
 		}
-
 		return driver;
 	}
 }
