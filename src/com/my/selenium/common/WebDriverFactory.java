@@ -9,18 +9,19 @@ public class WebDriverFactory {
 
 	public static WebDriver getDriver(DriverType drivertype) {
 		WebDriver driver = null;
-
+		
 		switch (drivertype) {
 		case CHROME:
 			// Chromedriver
 			System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 			driver = new ChromeDriver();
 			break;
+			
 		case FIREFOX:
 			// Firefox driver
 			System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 			driver = new FirefoxDriver();
-
+			
 			break;
 		case IE:
 			// IEdriver
